@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SwipePanel Demo</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Demo references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+
+    <!-- MetroSwipe references -->
+    <link href="/controls/SwipePanel/swipePanel.css" rel="stylesheet" />
+    <script src="/controls/SwipePanel/swipePanel.js"></script>
+    <script src="/controls/SwipePanel/swipeManager.js"></script>
+
+</head>
+<body>
+    <div style="margin: 8px;">
+        <p>SwipePanel demo project</p>
+        This is a simple demo that shows the swipeable control in action. It shows how controls can be embedded in a swipeable panel as well as how to add and select pages at runtime.<br /><br />
+    </div>
+
+    <div id="swipePanel" data-win-control="gplumb.SwipePanel" style="margin-left:20px; width: 50%; height: 75%; background: darkgray;">
+                
+        <div id="page01" style="background-color:purple;">
+            <div style="margin: 8px;">
+                <b>Panel 1</b>
+                <br />
+                <button onclick="WinJS.Application.showDialog('Oooooh - I can be clicked and swiped!');" style="width:80%; height: 40%; margin-top: 10px;">I still respond to clicks</button>
+            </div>
+        </div>
+            
+        <div id="page02" style="background-color:green;">
+            <div style="margin: 8px;">
+                <b>Panel 2</b>
+            </div>
+        </div>
+
+        <div id="page03" style="background-color:red;">
+            <div style="margin: 8px;">
+                <b>Panel 3</b>
+            </div>
+        </div>
+            
+    </div>
+
+    <div id="buttonPanel" style="position:absolute; left: 57%; top: 96px;">
+        The control has 2 properties:
+        <div style="margin: 10px; font-family:'Courier New';">
+            .pageIndex - The currently selected page (0 - n) <br />
+            .pageCount - The total number of pages (n)
+        </div>
+        <br />
+        The control has 1 public method:
+        <div style="margin: 10px; font-family:'Courier New';">
+            .addPage(x) - Adds a page to the control<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Element 'x' must be a &lt;div&gt;
+        </div>
+        <br />
+        Click on one of the following buttons to play!<br />
+        <button id="button01" class="b">Select first page</button>
+        <button id="button02" class="b">Select last page</button>
+        <button id="button03" class="b">Add a new page</button>
+    </div>
+
+</body>
+</html>
